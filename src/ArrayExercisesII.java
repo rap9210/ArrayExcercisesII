@@ -117,6 +117,7 @@ public class ArrayExercisesII {
         4. Use .length() on every word to get the number of characters.
         5. Print each word with its length in characters.
          */
+        scn.nextLine();
         System.out.println("Enter a sentence up to 132 characters: ");
         String challenge_input = scn.nextLine();
         while(challenge_input.length()>132){
