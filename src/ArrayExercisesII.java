@@ -41,20 +41,25 @@ public class ArrayExercisesII {
         7. Print array
          */
         int num_array[] = new int[10];
+        String num_string = "";
         System.out.println("\nPlease enter 10 integer values: ");
         int array_check = 0;
-        for (i=0; i<10; i++){
+        for (i=0; i<10; i++) {
             System.out.print(i + 1 + ")");
             int num_input = scn.nextInt();
-            for (x=0; x<10; x++) {
-                if (num_input == num_array[x]) {
-                    array_check += 1;
+            num_array[i] = num_input;
+            for (x=0; x<10; x++){
+                String string_input = Integer.toString(num_input);
+                if(!num_string.contains(string_input)){
+                    num_string+=string_input+" ";
+
                 }
-            }if (array_check == 0){
-                num_array[i] = num_input;
             }
-            }
-        System.out.println(Arrays.toString(num_array));
+        }System.out.println(num_string);
+
+
+
+
 
         //III. Given array 1: [1,7,6,5,9] and array 2: [2,7,6,3,4]
         //Write a program that will print out all pairs from arrays 1 and 2 that gives a sum of 13
